@@ -1,0 +1,41 @@
+@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>Login</PageTitle>
+
+<form class="col-md-12" id="box-login">
+
+  <div class="col-md-12 box-logo">
+    <img src="" alt="" />
+  </div>
+
+  <div class="col-md-12 text-center">
+    <h5 class="text-muted">FreeStreaming</h5>
+  </div>
+
+  <hr />
+
+  <div class="form-group">
+    <label class="sr-only">Usuário</label>
+    <div class="input-group mb-2 form-group">
+      <div class="input-group-prepend">
+      </div>
+      <input type="text" class="form-control text-uppercase" id="login-usuario" placeholder="Usuário">
+    </div>
+    <label class="sr-only" >Senha</label>
+    <input type="password" class="form-control" id="login-senha" placeholder="Senha" ng-required="true" autocomplete="off">
+  </div>
+
+  <div class="form-group">
+    <input type="submit" value="Entrar" class="btn btn-primary col-md-12"/>
+  </div>
+
+  <div class="form-group text-right">
+    <a href="" style="font-size: 12px;" ng-click="resetPassword = true">Esqueceu a senha?</a>
+  </div>
+
+</form>
+
+@code {
+
+}
