@@ -1,19 +1,35 @@
 ﻿@page "/series"
-@rendermode InteractiveServer
+    @rendermode InteractiveServer
 
-<PageTitle>Counter</PageTitle>
+    <PageTitle>Series</PageTitle>
 
-<h1>Counter</h1>
+    <h1>Series</h1>
 
-<p role="status">Current count: @currentCount</p>
+    <input @bind="searchValue" />
+    <button class="btn btn-primary" type="subimit" @onclick="SearchSeries">Search</button>
+    <p>Serie pesquisada: @searchValue</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+    @if(series.Any() == false){
+    <p>Busque alguma serie...</p>
+}else{
+    <div class="series">
+        @foreach (var serie in series)
+        {
+            <p>Serie</p>
+        }
+        </div>
+
+    }
+
 
 @code {
-    private int currentCount = 0;
+    private string searchValue = "";
+    List<Series> series = new List<Series>();
 
-    private void IncrementCount()
+    private List<Series> SearchSeries()
     {
-        currentCount++;
+	//TODO: create request and series = response;
+	
+        return new List<Series>();
     }
 }
